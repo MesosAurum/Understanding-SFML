@@ -81,8 +81,8 @@ int main() {
 
 	sf::Vector2u windowSize = { 640, 360 };
 	sf::VideoMode videoMode = sf::VideoMode(windowSize);
-	sf::RenderWindow *window = new sf::RenderWindow(videoMode, "Tutorials");
-	window->setFramerateLimit(60);
+	sf::RenderWindow window(sf::RenderWindow(videoMode, "Tutorials"));
+	window.setFramerateLimit(60);
 
 	//Ignore circleShape for this episode.
 	sf::CircleShape circle(5.0f);
@@ -91,10 +91,10 @@ int main() {
 	circle.setOrigin(circle.getGeometricCenter());
 	circle.setPosition(sf::Vector2f(windowSize) * 0.5f);
 
-	while(window->isOpen()) {
+	while(window.isOpen()) {
 
 		//Update
-		PollEvents(*window);
+		PollEvents(window);
 
 		//A color may be called from the Color class Red, Yellow, Green, Cyan, Blue, Magenta, Black, and White.
 		sf::Color color0 = sf::Color::Green;
@@ -104,14 +104,12 @@ int main() {
 		sf::Color color3 = sf::Color(0x3F00FFFF);
 
 		//Render
-		window->clear(color3);
+		window.clear(color3);
 
 		//Drawing
-		window->draw(circle);
+		window.draw(circle);
 
-		window->display();
+		window.display();
 	}
-
-	delete window;
 	return 0;
 }
