@@ -62,6 +62,7 @@ int main() {
 		std::cerr << "GEOMETRY_SHADERS_WILL_NOT_WORK_ON_THIS_SYSTEM!!!" << std::endl;
 	}
 	//Our shader addresses
+	//The shaders may be found in the files here in "Understanding-SFML".
 	std::string vertexAddress = "shaders.vert";
 	std::string fragmentAddress = "shaders.vert";
 	//May support different types of shaders, or just a vertex and fragment shader (in that order).
@@ -69,7 +70,6 @@ int main() {
 
 		std::cerr << "ERROR::COULD_NOT_LOAD_SHADER_FROM_FILE!!!" << std::endl;
 	}
-
 	sf::Vector2f windowSizeF = sf::Vector2f(windowSize);
 
 	//Rectangles to hold the textures we will use.
