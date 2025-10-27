@@ -62,10 +62,10 @@ int main() {
 		std::cerr << "GEOMETRY_SHADERS_WILL_NOT_WORK_ON_THIS_SYSTEM!!!" << std::endl;
 	}
 	//Our shader addresses
-	std::string vertexAddress = "Shaders.vert";
-	std::string fragmentAddress = "Shaders.vert";
+	std::string vertexAddress = "shaders.vert";
+	std::string fragmentAddress = "shaders.vert";
 	//May support different types of shaders, or just a vertex and fragment shader (in that order).
-	if(!shader.loadFromFile("Shaders.vert", "Shaders.frag")) {
+	if(!shader.loadFromFile(vertexAddress, fragmentAddress)) {
 
 		std::cerr << "ERROR::COULD_NOT_LOAD_SHADER_FROM_FILE!!!" << std::endl;
 	}
