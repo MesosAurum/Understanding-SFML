@@ -111,7 +111,7 @@ int main() {
 	view0.zoom(2.0f);
 	view0.setRotation(sf::radians(0.2f));
 	//Cuts the viewport,
-	//size and position are normalized (0 is 0, 1 is window x and y normalized position/size.
+	//size and position are normalized (0 is 0, 1 is window x and y normalized position/size).
 	//First set of coordinates states where the cut starts from, second set is the size of the cut.
 	view0.setScissor({ { 0.0f, 0.0f }, { 0.5f, 1.0f } });
 	//Setting viewport,
